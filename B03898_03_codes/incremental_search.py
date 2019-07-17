@@ -47,5 +47,5 @@ if __name__ == "__main__":
     """
     y = lambda x: x**3 + 2.0*x**2 - 5.
     root, iterations = incremental_search(y, -5., 5., 0.001)
-    print "Root is:", root
-    print "Iterations:", iterations
+    print ("Root is:", root)
+    print ("Iterations:", iterations)
