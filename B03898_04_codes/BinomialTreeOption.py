@@ -69,7 +69,6 @@ class BinomialTreeOption(StockOption):
         return payoffs[0]
 
 if __name__ == "__main__":
-    from BinomialTreeOption import BinomialTreeOption
     am_option = BinomialTreeOption(
         50, 50, 0.05, 0.5, 2,
         {"pu": 0.2, "pd": 0.2, "is_call": False, "is_eu": False})
