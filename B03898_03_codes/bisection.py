@@ -37,5 +37,5 @@ def bisection(f, a, b, tol=0.1, maxiter=10):
 if __name__ == "__main__":
     y = lambda x: x**3 + 2*x**2 - 5
     root, iterations = bisection(y, -5, 5, 0.00001, 100)
-    print "Root is:", root
-    print "Iterations:", iterations
+    print("Root is:", root)
+    print("Iterations:", iterations)
