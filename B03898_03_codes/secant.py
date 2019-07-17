@@ -28,7 +28,7 @@ def secant(f, a, b, tol=0.001, maxiter=100):
         b = c
         n += 1
 
-    return c, n
+    return None, n
 
 if __name__ == "__main__":
     y = lambda x: x**3 + 2*x**2 - 5
