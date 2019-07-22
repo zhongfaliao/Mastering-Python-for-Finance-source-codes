@@ -18,7 +18,7 @@ L = np.linalg.cholesky(A)
 
 print( L)
 
-print( np.dot(L, L.T.conj())  # A=L.L*)
+print( np.dot(L, L.T.conj()) ) # A=L.L*)
 
 
 y = np.linalg.solve(L, B)  # L.L*.x=B. When L*.x=y, then L.y=B.
@@ -27,5 +27,5 @@ print( y)
 x = np.linalg.solve(L.T.conj(), y)  # x=L*'.y
 print( x)
 
-print( np.mat(A) * np.mat(x).T  # B=Ax)
+print( np.mat(A) * np.mat(x).T ) # B=Ax)
 
