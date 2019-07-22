@@ -19,6 +19,6 @@ problem += x + y <= 80, "2nd constraint"
 problem += x <= 40, "3rd constraint"
 problem.solve()
 
-print "Maximization Results:"
+print ("Maximization Results:")
 for variable in problem.variables():
-    print variable.name, "=", variable.varValue
+    print (variable.name, "=", variable.varValue)
