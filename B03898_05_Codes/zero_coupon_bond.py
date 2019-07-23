@@ -15,4 +15,4 @@ def zero_coupon_bond(par, y, t):
     """
     return par/(1+y)**t
 
-print zero_coupon_bond(100, 0.05, 5)
+print (zero_coupon_bond(100, 0.05, 5))
