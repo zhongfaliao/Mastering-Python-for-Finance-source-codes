@@ -70,7 +70,7 @@ class BootstrapYieldCurve(object):
             return spot_rate
 
         except:
-            print "Error: spot rate not found for T=%s" % t
+            print ("Error: spot rate not found for T=%s" % t)
             
     def zero_coupon_spot_rate(self, par, price, T):
         """ Get zero rate of a zero coupon bond """
