@@ -18,6 +18,7 @@ class BinomialEuropeanOption(StockOption):
         self.M = self.N + 1  # Number of terminal nodes of tree
         self.u = 1 + self.pu  # Expected value in the up state
         self.d = 1 - self.pd  # Expected value in the down state
+        # qu and qd are probabilities of up and down moves, respectively
         self.qu = (math.exp((self.r-self.div)*self.dt) -
                    self.d) / (self.u-self.d)
         self.qd = 1-self.qu
