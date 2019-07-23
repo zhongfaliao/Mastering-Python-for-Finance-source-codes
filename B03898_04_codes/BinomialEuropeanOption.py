@@ -46,6 +46,8 @@ class BinomialEuropeanOption(StockOption):
             payoffs = (payoffs[:-1] * self.qu +
                        payoffs[1:] * self.qd) * self.df
 
+        # as the above for loop runs, the payoffs array gets shorten
+        # from the terminal tree nodes, with many entries, to the roos, with one entry
         return payoffs
 
     def __begin_tree_traversal__(self):
