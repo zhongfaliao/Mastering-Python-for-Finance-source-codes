@@ -20,8 +20,8 @@ class StockOption(object):
         self.STs = None  # Declare the stock prices tree
 
         """ Optional parameterss used by derived classes """
-        self.pu = params.get("pu", 0)  # Probability of up state
-        self.pd = params.get("pd", 0)  # Probability of down state
+        self.pu = params.get("pu", 0)  # Quantity of an up move, 0.20 means 20% up move from original to 120%
+        self.pd = params.get("pd", 0)  # Quantity of a down move, 0.20 means 20% down move from original to 80%
         self.div = params.get("div", 0)  # Divident yield
         self.sigma = params.get("sigma", 0)  # Volatility
         self.is_call = params.get("is_call", True)  # Call or put
