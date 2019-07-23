@@ -20,7 +20,7 @@ class BinomialCRROption(BinomialTreeOption):
         self.qd = 1-self.qu
 
 if __name__ == "__main__":
-    from BinomialCRROption import BinomialCRROption
+    # from BinomialCRROption import BinomialCRROption
     eu_option = BinomialCRROption(
         50, 50, 0.05, 0.5, 2,
         {"sigma": 0.3, "is_call": False})
