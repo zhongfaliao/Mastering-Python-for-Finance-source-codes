@@ -49,3 +49,5 @@ if __name__ == "__main__":
     root, iterations = incremental_search(y, -5., 5., 0.001)
     print ("Root is:", root)
     print ("Iterations:", iterations)
+    
+    
