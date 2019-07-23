@@ -72,4 +72,4 @@ if __name__ == "__main__":
     am_option = BinomialTreeOption(
         50, 50, 0.05, 0.5, 2,
         {"pu": 0.2, "pd": 0.2, "is_call": False, "is_eu": False})
-    print am_option.price()
+    print (am_option.price())
