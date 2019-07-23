@@ -35,3 +35,5 @@ if __name__ == "__main__":
     root, iterations = newton(y, dy, 5.0, 0.00001, 100)
     print ("Root is:", root)
     print ("Iterations:", iterations)
+    
+    
