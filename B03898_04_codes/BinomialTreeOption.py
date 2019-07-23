@@ -22,11 +22,14 @@ class BinomialTreeOption(StockOption):
 
     def _initialize_stock_price_tree_(self):
         # Initialize a 2D tree at T=0
-        self.STs = [np.array([self.S0])]
+        self.STs = [np.array([self.S0])] 
+        # therefore, STs is a sequence, whose entries are np-arrays
 
         # Simulate the possible stock prices path
         for i in range(self.N):
-            prev_branches = self.STs[-1]
+            prev_branches = self.STs[-1] 
+            #prev_branches is an np-array
+            
             st = np.concatenate((prev_branches*self.u,
                                  [prev_branches[-1]*self.d]))
             self.STs.append(st)  # Add nodes at each time step
