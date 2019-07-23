@@ -94,3 +94,5 @@ if __name__ == "__main__":
     plt.ylabel("Zero Rate (%)")
     plt.xlabel("Maturity in Years")
     plt.show()
+    
+    
