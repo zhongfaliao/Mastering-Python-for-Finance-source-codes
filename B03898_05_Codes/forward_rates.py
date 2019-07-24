@@ -43,4 +43,4 @@ if __name__ == "__main__":
     fr.add_spot_rate(1.00, 10.536)
     fr.add_spot_rate(1.50, 10.681)
     fr.add_spot_rate(2.00, 10.808)
-    print fr.get_forward_rates()
+    print (fr.get_forward_rates())
