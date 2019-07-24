@@ -22,6 +22,5 @@ def bond_ytm(price, par, T, coup, freq=2, guess=0.05):
 
 if __name__ == "__main__":
     ytm = bond_ytm(95.0428, 100, 1.5, 5.75, 2)
-    print ytm
-    
+    print (ytm)
 
