@@ -19,4 +19,6 @@ def bond_price(par, T, ytm, coup, freq=2):
 if __name__ == "__main__":
     from bond_ytm import bond_ytm
     ytm = bond_ytm(95.0428, 100, 1.5, 5.75, 2)
-    print bond_price(100, 1.5, ytm, 5.75, 2)
+    print (bond_price(100, 1.5, ytm, 5.75, 2))
+    
+    
