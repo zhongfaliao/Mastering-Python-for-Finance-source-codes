@@ -13,7 +13,7 @@ from bond_price import bond_price
 def bond_convexity(price, par, T, coup, freq, dy=0.01):
     ytm = bond_ytm(price, par, T, coup, freq)
 
-    ytm_minus = ytm - dy    
+    ytm_minus = ytm - dy
     price_minus = bond_price(par, T, ytm_minus, coup, freq)
     
     ytm_plus = ytm + dy
