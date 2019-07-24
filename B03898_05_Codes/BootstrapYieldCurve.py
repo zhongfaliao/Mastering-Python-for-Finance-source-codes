@@ -31,7 +31,7 @@ class BootstrapYieldCurve(object):
         
     def __bootstrap_zero_coupons__(self):
         """ Get zero rates from zero coupon bonds """
-        for T in self.instruments.iterkeys():
+        for T in self.instruments.keys(): # iterkeys(): previous python version
             (par, coup, price, freq) = self.instruments[T]
             if coup == 0:
                 self.zero_rates[T] = \
