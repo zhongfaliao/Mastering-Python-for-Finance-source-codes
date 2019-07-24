@@ -24,4 +24,4 @@ def bond_mod_duration(price, par, T, coup, freq, dy=0.01):
 
 if __name__ == "__main__":
     from bond_mod_duration import bond_mod_duration
-    print bond_mod_duration(95.04, 100, 1.5, 5.75, 2, 0.01)
+    print (bond_mod_duration(95.04, 100, 1.5, 5.75, 2, 0.01))
