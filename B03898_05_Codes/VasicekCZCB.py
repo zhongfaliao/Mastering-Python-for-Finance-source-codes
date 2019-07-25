@@ -164,7 +164,7 @@ class VasicekCZCB:
         nf = len(a)  # Number of equations
         ac, bc, cc, dc = \
             map(np.array, (a, b, c, d))  # Copy the array
-        for it in xrange(1, nf):
+        for it in range(1, nf): # xrange changed to range
             mc = ac[it]/bc[it-1]
             bc[it] = bc[it] - mc*cc[it-1] 
             dc[it] = dc[it] - mc*dc[it-1]
@@ -172,7 +172,7 @@ class VasicekCZCB:
         xc = ac
         xc[-1] = dc[-1]/bc[-1]
 
-        for il in xrange(nf-2, -1, -1):
+        for il in range(nf-2, -1, -1): # xrange changed to range
             xc[il] = (dc[il]-cc[il]*xc[il+1])/bc[il]
 
         del bc, cc, dc  # Delete variables from memory
