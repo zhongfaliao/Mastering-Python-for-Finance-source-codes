@@ -229,9 +229,9 @@ class Backtester:
         self.strategy.event_position(self.positions)
         self.rpnl.loc[timestamp, "rpnl"] = position.realized_pnl
 
-        print self.get_trade_date(), \
+        print (self.get_trade_date(), \
             "Filled:", "BUY" if is_buy else "SELL", \
-            qty, symbol, "at", price
+            qty, symbol, "at", price)
 
     def get_position(self, symbol):
         if symbol not in self.positions:
@@ -244,10 +244,10 @@ class Backtester:
     def evthandler_order(self, order):
         self.unfilled_orders.append(order)
 
-        print self.get_trade_date(), \
+        print (self.get_trade_date(), \
             "Received order:", \
             "BUY" if order.is_buy else "SELL", order.qty, \
-             order.symbol
+             order.symbol)
 
     def match_order_book(self, prices):
         if len(self.unfilled_orders) > 0:
@@ -283,11 +283,11 @@ class Backtester:
             self.upnl.loc[self.get_timestamp(), "upnl"] = \
                 position.unrealized_pnl
 
-            print self.get_trade_date(), \
+            print (self.get_trade_date(), \
                 "Net:", position.net, \
                 "Value:", position.position_value, \
                 "UPnL:", position.unrealized_pnl, \
-                "RPnL:", position.realized_pnl
+                "RPnL:", position.realized_pnl)
 
     def evthandler_tick(self, prices):
         self.current_prices = prices
@@ -305,9 +305,9 @@ class Backtester:
         mds.source = self.data_source
         mds.start, mds.end = self.start_dt, self.end_dt
 
-        print "Backtesting started..."
+        print ("Backtesting started...")
         mds.start_market_simulation()
-        print "Completed."
+        print ("Completed.")
 
 
 if __name__ == "__main__":
